@@ -4,4 +4,7 @@
 
 Сущности в данном проекте:
 * Users
+* Categories
+* Questions
 * Tests
+* Results
