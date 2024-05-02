@@ -6,5 +6,6 @@
 * Users
 * Categories
 * Questions
+* Answers
 * Tests
 * Results
