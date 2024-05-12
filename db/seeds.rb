@@ -1,17 +1,15 @@
-users = %w[Alice Bob Charlie]
-users.each do |name|
+users = %w[Alice Bob Charlie].each do |name|
   User.create!(name: name, email: "#{name.downcase}@example.com", role: 0)
 end
 
-categories = %w[Programming Math]
-categories.each do |title|
+%w[Programming Math].each do |title|
   category = Category.create!(title: title)
 
   2.times do |i|
     test = Test.create!(
       title: "#{title} Test Level #{i + 1}",
       level: i + 1,
-      author_id: User.find_by(name: users.sample).id,
+      author_id: users.sample.id,
       category_id: category.id
     )
 
