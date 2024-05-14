@@ -1,12 +1,15 @@
-users = %w[Alice Bob Charlie].each do |name|
-  User.create!(name: name, email: "#{name.downcase}@example.com", role: 0)
+users = []
+tests = []
+
+%w[Alice Bob Charlie].each do |name|
+  users << User.create!(name: name, email: "#{name.downcase}@example.com", role: 0)
 end
 
 %w[Programming Math].each do |title|
   category = Category.create!(title: title)
 
   2.times do |i|
-    test = Test.create!(
+    tests << test = Test.create!(
       title: "#{title} Test Level #{i + 1}",
       level: i + 1,
       author_id: users.sample.id,
@@ -20,5 +23,13 @@ end
         Answer.create!(body: "Answer #{k + 1} for Question #{j + 1}", correct: k == 0, question_id: question.id)
       end
     end
+  end
+end
+
+users.each do |user|
+  tests.each do |test|
+    completed = [true, false].sample
+
+    TestsUser.create!(user_id: user.id, test_id: test.id, completed: completed)
   end
 end
