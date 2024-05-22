@@ -18,9 +18,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = @test.questions.create(question_params)
+    @question = @test.questions.build(question_params)
 
-    render plain: "Question: '#{@question.body}' created!"
+    if @question.save
+      render plain: "Question: '#{@question.body}' created!"
+    else
+      render plain: @question.errors.full_messages
+    end
   end
 
   def destroy
