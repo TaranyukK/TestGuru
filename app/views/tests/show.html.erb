@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <%= link_to 'New question', new_test_question_path(test_id: @test.id) %>
+  <%= link_to 'New question', new_test_question_path(@test) %>
 </p>
 
 <% if @test.questions.present? %>
@@ -33,4 +33,4 @@
 <% end %>
 
 <%= link_to 'Edit', edit_test_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+<%= link_to 'Back', root_path %>

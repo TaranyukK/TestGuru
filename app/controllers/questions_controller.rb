@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :set_test, only: [:new, :create]
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_test, only: %i[new create]
+  before_action :set_question, only: %i[show edit update destroy]
 
   def show
   end
@@ -33,7 +33,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
 
-    redirect_to test_path(@question.test)
+    redirect_to @question.test
   end
 
   private
