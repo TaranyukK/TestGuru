@@ -1,0 +1,18 @@
+<h1>Start <%= @tests_user.test.title%> Test</h1>
+
+<p><%= @tests_user.test.questions.index(@tests_user.current_question) + 1 %>/<%= @tests_user.test.questions.count %></p>
+
+<b>
+  <%= @tests_user.current_question.body %>
+</b>
+
+<%= form_with url: tests_user_path(@tests_user), local: true, method: :put do |f| %>
+  <%= f.collection_check_boxes :answer_ids, @tests_user.current_question.answers, :id, :body, include_hidden: false do |b| %>
+    <p>
+      <%= b.check_box id: "answer_ids_#{b.object_id}" %>
+      <%= b.label %>
+    </p>
+  <% end %>
+
+  <%= f.submit 'Next' %>
+<% end %>
