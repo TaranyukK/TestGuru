@@ -2,15 +2,13 @@ class QuestionsController < ApplicationController
   before_action :set_test, only: %i[new create]
   before_action :set_question, only: %i[show edit update destroy]
 
-  def show
-  end
+  def show; end
 
   def new
     @question = @test.questions.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @question = @test.questions.build(question_params)

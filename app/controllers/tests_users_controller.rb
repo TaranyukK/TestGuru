@@ -1,9 +1,7 @@
 class TestsUsersController < ApplicationController
   before_action :set_tests_user, only: [:show, :result, :update]
 
-  def show
-
-  end
+  def show; end
 
   def result
     @result = @tests_user.correct_answers_percent
