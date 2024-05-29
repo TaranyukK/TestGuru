@@ -1,0 +1,13 @@
+<h1>The <%= @tests_user.test.title %> completed!</h1>
+
+<b>Your result:</b>
+
+<p>
+  <% if @result >= 85 %>
+    <span style="color: green"><%= @result %> SUCCESS!</span>
+  <% else %>
+    <span style="color: red"><%= @result %> FAILURE!</span>
+  <% end %>
+</p>
+
+<%= link_to 'All tests', root_path %>
