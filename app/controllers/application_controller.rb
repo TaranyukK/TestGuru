@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      session[:return_to] = request.url if request.get?
+      cookies[:return_to] = request.url if request.get?
       redirect_to login_path, alert: 'You need to log in or sign up'
     end
   end
