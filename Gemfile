@@ -23,6 +23,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'foreman'
+  gem 'letter_opener'
 end
 
 group :test do
@@ -32,3 +33,5 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "devise", "~> 4.9"

@@ -1,26 +1,50 @@
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid black;
+
+  &.admin {
+    height: 35px;
+    padding: 15px;
+    line-height: 35px;
+    color: white;
+    background-color: #4293e6;
+    margin-bottom: 40px;
+  }
 }
 
-.nav-left, .nav-right {
+.navbar-section {
   display: flex;
   align-items: center;
 }
 
-.nav-logo {
+.navbar-logo {
   font-size: 1.5em;
   margin-right: 20px;
   text-decoration: none;
 }
 
-.nav-link {
+.navbar-link {
   margin-right: 15px;
   text-decoration: none;
 }
 
-.nav-text {
+.navbar-text {
   margin-right: 15px;
+}
+
+.navbar-admin {
+  &.user {
+    font-size: 140%;
+    font-weight: bold;
+  }
+
+  &.user-email {
+    text-decoration: underline;
+  }
+}
+
+.navbar.admin a {
+  color: white;
 }

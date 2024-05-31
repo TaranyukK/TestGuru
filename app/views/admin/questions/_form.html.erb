@@ -1,0 +1,10 @@
+<%= form_with model: [:admin, @test, @question], local: true do |f| %>
+  <%= render 'shared/errors', resource: @question %>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: 7, cols: 60 %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>

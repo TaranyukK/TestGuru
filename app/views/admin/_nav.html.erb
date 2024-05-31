@@ -1,0 +1,8 @@
+<div class="navbar admin">
+  <span class="navbar-title">TestGuru Admin Panel</span>
+
+  <div class="navbar-admin user">
+    Welcome, <b class="navbar-admin user-email"><%= current_user.email %></b> Guru |
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link' %>
+  </div>
+</div>

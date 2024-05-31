@@ -11,6 +11,8 @@ class TestsUsersController < ApplicationController
     @tests_user.accept!(params[:answer_ids])
 
     if @tests_user.completed?
+      TestsMailer.completed_test(@tests_user).deliver_now
+
       redirect_to result_tests_user_path(@tests_user)
     else
       render :show
