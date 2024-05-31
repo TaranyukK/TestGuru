@@ -1,8 +1,8 @@
 users = []
 tests = []
 
-%w[Alice Bob Charlie].each do |name|
-  users << User.create!(name: name, email: "#{name.downcase}@example.com", role: 0)
+{ Alice: 'Cooper', Bob: 'Dylan', Charlie: 'Starr' }.each do |first_name, last_name|
+  users << User.create!(first_name: first_name.to_s, last_name: last_name, email: "#{first_name.downcase}@example.com", type: 'User')
 end
 
 %w[Programming Math].each do |title|
