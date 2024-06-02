@@ -1,13 +1,13 @@
-<h1>The <%= @tests_user.test.title %> completed!</h1>
+<h1><%= t('.test_completed', test_title: @tests_user.test.title) %></h1>
 
-<b>Your result:</b>
+<b><%= t('.your_result') %></b>
 
 <p>
   <% if @result >= 85 %>
-    <span style="color: green"><%= @result %> SUCCESS!</span>
+    <span style="color: green"><%= t('.success', result: @result) %></span>
   <% else %>
-    <span style="color: red"><%= @result %> FAILURE!</span>
+    <span style="color: red"><%= t('.failure', result: @result) %></span>
   <% end %>
 </p>
 
-<%= link_to 'All tests', tests_path %>
+<%= link_to t('navigation.all_tests'), tests_path %>
