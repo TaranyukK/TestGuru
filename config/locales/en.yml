@@ -119,6 +119,8 @@ en:
       welcome: 'Welcome'
       guru: 'Guru'
       logout: 'Logout'
+      tests: 'Tests'
+      gists: 'Gists'
     tests:
       index:
         header: 'Tests'
@@ -160,6 +162,14 @@ en:
       show:
         body: 'Body'
         correct: 'Correct'
+    gists:
+      index:
+        header: 'Gists'
+        question_body: 'Question'
+        gist: 'Gist'
+        user_email: 'User`s email'
+      gist:
+        link: 'Link'
 
   tests_mailer:
     completed_test:

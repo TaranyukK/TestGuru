@@ -121,6 +121,8 @@ ru:
       welcome: 'Добро пожаловать'
       guru: 'Гуру'
       logout: 'Выйти'
+      tests: 'Тесты'
+      gists: 'Gist`ы'
     tests:
       index:
         header: 'Тесты'
@@ -162,6 +164,15 @@ ru:
       show:
         body: 'Тело'
         correct: 'Правильный'
+    gists:
+      index:
+        header: 'Gist`ы'
+        question_body: 'Вопрос'
+        actions: 'Действия'
+        gist: 'Gist'
+        user_email: 'Email пользователя'
+      gist:
+        link: 'Ссылка'
 
   tests_mailer:
     completed_test:

@@ -6,7 +6,8 @@ ru:
       test: 'Тест'
       question: 'Вопрос'
       answer: 'Ответ'
-      tests_user: 'ПользовательТеста'
+      tests_user: 'Пользователь Тест'
+      gist: 'Gist`ы'
     attributes:
       test:
         title: 'Название'
@@ -20,6 +21,7 @@ ru:
       question:
       answer:
       test_user:
+      gist:
     errors:
       messages:
         record_invalid: 'Ошибка валидации: %{errors}'
