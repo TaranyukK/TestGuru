@@ -1,10 +1,9 @@
 <% if resource.errors.present? %>
-  <div>
+  <div class="alert alert-danger">
     <h2>
       <%= t('.detected', error_count: pluralize(resource.errors.count, 'error')) %>:
       <%= t('.header', count: resource.errors.count) %>:
     </h2>
-
     <ul>
       <% resource.errors.full_messages.each do |message| %>
         <li><%= message %></li>
