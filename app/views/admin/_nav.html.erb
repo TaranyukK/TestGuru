@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <span class="navbar-brand"><%= t('.admin_panel') %></span>
+    <%= link_to t('testguru'), root_path, class: 'navbar-brand' %>
     <div class="d-flex">
       <span class="navbar-text me-3">
         <%= t('.welcome') %>, <b class="user-email"><%= current_user.email %></b> <%= t('.guru') %>
