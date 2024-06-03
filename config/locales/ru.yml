@@ -75,6 +75,7 @@ ru:
         other: "%{count} ошибки обнаружено"
     nav:
       all_tests: 'Все тесты'
+      admin_panel: 'Панель администратора'
       welcome: "Добро пожаловать, %{full_name} Гуру"
       logout: 'Выйти'
       sign_up: 'Регистрация'

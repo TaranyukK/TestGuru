@@ -1,11 +1,13 @@
 <tr>
   <td><%= answer.body %></td>
-  <td><%= answer.correct %></td>
-  <td><%= link_to t('actions.show'), admin_answer_path(answer) %></td>
-  <td><%= link_to t('actions.edit'), edit_admin_answer_path(answer) %></td>
-  <td><%= link_to t('actions.delete'),
-                  admin_answer_path(answer),
-                  method: :delete,
-                  data: { confirm: t('actions.confirmation') } %>
+  <td><%= answer.correct ? t('true') : t('false') %></td>
+  <td><%= link_to t('actions.show'), admin_answer_path(answer), class: 'btn btn-info btn-sm' %></td>
+  <td><%= link_to t('actions.edit'), edit_admin_answer_path(answer), class: 'btn btn-warning btn-sm' %></td>
+  <td>
+    <%= link_to t('actions.delete'), admin_answer_path(answer),
+                method: :delete,
+                data: { confirm: t('actions.confirmation') },
+                class: 'btn btn-danger btn-sm'
+    %>
   </td>
 </tr>

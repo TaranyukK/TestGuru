@@ -1,15 +1,17 @@
-<%= form_with model: [:admin, @question, @answer], local: true do |f| %>
+<%= form_with model: [:admin, @question, @answer], local: true, class: 'form-horizontal' do |f| %>
   <%= render 'shared/errors', resource: @answer %>
 
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body, rows: 7, cols: 60 %>
-  </p>
+  <div class="mb-3">
+    <%= f.label :body, class: 'form-label' %>
+    <%= f.text_area :body, rows: 7, class: 'form-control' %>
+  </div>
 
-  <p>
-    <%= f.label :correct %>
-    <%= f.check_box :correct %>
-  </p>
+  <div class="mb-3 form-check">
+    <%= f.label :correct, class: 'form-check-label' %>
+    <%= f.check_box :correct, class: 'form-check-input' %>
+  </div>
 
-  <p><%= f.submit %></p>
+  <div class="mb-3">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
 <% end %>

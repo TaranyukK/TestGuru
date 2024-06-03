@@ -1,12 +1,14 @@
-<p>
+<div class="mb-3">
   <strong><%= t('.body') %>:</strong>
   <%= @answer.body %>
-</p>
+</div>
 
-<p>
+<div class="mb-3">
   <strong><%= t('.correct') %>:</strong>
   <%= @answer.correct %>
-</p>
+</div>
 
-<%= link_to t('navigation.edit'), edit_admin_answer_path(@answer) %> |
-<%= link_to t('navigation.back'), admin_question_path(@answer.question) %>
+<div>
+  <%= link_to t('navigation.edit'), edit_admin_answer_path(@answer), class: 'btn btn-warning' %>
+  <%= link_to t('navigation.back'), admin_question_path(@answer.question), class: 'btn btn-secondary' %>
+</div>
