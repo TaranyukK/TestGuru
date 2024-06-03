@@ -8,15 +8,16 @@ module ApplicationHelper
   end
 
   def flash_messages
+    alert_types = {
+      notice: 'success',
+      alert: 'danger',
+      error: 'danger',
+      warning: 'warning',
+      info: 'info'
+    }
+
     flash.map do |type, message|
-      alert_class = case type.to_sym
-                        when :notice then 'success'
-                        when :alert then 'danger'
-                        when :error then 'danger'
-                        when :warning then 'warning'
-                        else 'info'
-                        end
-      content_tag(:div, message, class: "alert alert-#{alert_class}")
+      content_tag(:div, message, class: "alert alert-#{alert_types[type.to_sym]}")
     end.join.html_safe
   end
 end
