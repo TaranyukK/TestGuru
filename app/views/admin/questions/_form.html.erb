@@ -1,10 +1,12 @@
-<%= form_with model: [:admin, @test, @question], local: true do |f| %>
+<%= form_with model: [:admin, @test, @question], local: true, class: 'form-horizontal' do |f| %>
   <%= render 'shared/errors', resource: @question %>
 
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body, rows: 7, cols: 60 %>
-  </p>
+  <div class="mb-3">
+    <%= f.label :body, class: 'form-label' %>
+    <%= f.text_area :body, rows: 7, cols: 60, class: 'form-control' %>
+  </div>
 
-  <p><%= f.submit %></p>
+  <div class="mb-3">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
 <% end %>
