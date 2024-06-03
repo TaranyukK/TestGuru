@@ -9,14 +9,14 @@ module ApplicationHelper
 
   def flash_messages
     flash.map do |type, message|
-      bootstrap_class = case type.to_sym
-                        when :notice then 'alert alert-success'
-                        when :alert then 'alert alert-danger'
-                        when :error then 'alert alert-danger'
-                        when :warning then 'alert alert-warning'
-                        else 'alert alert-info'
+      alert_class = case type.to_sym
+                        when :notice then 'success'
+                        when :alert then 'danger'
+                        when :error then 'danger'
+                        when :warning then 'warning'
+                        else 'info'
                         end
-      content_tag(:div, message, class: bootstrap_class)
+      content_tag(:div, message, class: "alert alert-#{alert_class}")
     end.join.html_safe
   end
 end
