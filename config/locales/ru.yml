@@ -23,7 +23,8 @@ ru:
       new: 'Создать'
       edit: 'Изменить'
       question: 'Вопрос'
-
+    tests_users:
+      link: 'ссылке'
     label:
       test:
         title: 'Название'
@@ -65,6 +66,10 @@ ru:
         create: 'Создать ответ'
         update: 'Изменить ответ'
 
+  services:
+    gist_question:
+      description: "Вопрос о %{title} от TestGuru"
+
   shared:
     errors:
       detected: "%{error_count} обнаружено"
@@ -100,11 +105,15 @@ ru:
     show:
       start_test: "%{test_title} Тест"
       next: 'Следующий'
+      gist_question: 'Gist Вопрос'
     result:
       test_completed: "%{test_title} тест завершен!"
       your_result: 'Ваш результат:'
       success: "%{result}% УСПЕХ!"
       failure: "%{result}% ПРОВАЛ!"
+    gist:
+      success: 'Gist вопроса успешно создан! Вы можете перейти на нее по %{url}'
+      failure: 'Что-то пошло не так, повторите попытку позже!'
 
   admin:
     nav:

@@ -11,5 +11,7 @@
       </div>
     <% end %>
   </div>
+
+  <%= link_to t('.gist_question'), gist_tests_user_path(@tests_user), method: :post, class: "btn btn-secondary" %>
   <%= f.submit t('.next'), class: "btn btn-primary" %>
 <% end %>
