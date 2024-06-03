@@ -4,7 +4,7 @@
   </p>
 
   <p>
-    <%= github_url('TaranyukK', 'TestGuru') %> - Сайт для создания и прохождения тестов.
-    <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com', target: '_blank' %>
+    <%= t('.description', url: github_url('TaranyukK', 'TestGuru')).html_safe %>.
+    <%= link_to t('.thinknetica'), 'https://thinknetica.com', target: '_blank' %>
   </p>
 </div>

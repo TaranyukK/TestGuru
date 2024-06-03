@@ -1,2 +1,156 @@
 en:
-  hello: "Hello world"
+  testguru: 'TestGuru'
+
+  navigation:
+    edit: 'Edit'
+    back: 'Back'
+    all_tests: 'All tests'
+
+  actions:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirmation: "Are you sure?"
+
+  controllers:
+    sessions:
+      hello: "Hello, %{full_name}!"
+
+  helpers:
+    select:
+      prompt: 'Please select'
+    questions:
+      new: 'Create New'
+      edit: 'Edit'
+      question: 'Question'
+
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+        category_id: 'Category'
+        author: 'Author'
+        author_id: 'Author'
+      category:
+        title: 'Title'
+      question:
+        body: 'Body'
+        test: 'Test'
+        test_id: 'Test'
+      answer:
+        body: 'Body'
+        correct: 'Correct'
+      tests_user:
+        test: 'Test'
+        test_id: 'Test'
+        user: 'User'
+        user_id: 'User'
+        completed: 'Completed'
+        correct_questions: 'Correct questions'
+        current_question: 'Current question'
+        current_question_id: 'Current question'
+      user:
+        first_name: 'First name'
+        last_name: 'Last name'
+
+    submit:
+      test:
+        create: 'Create test'
+        update: 'Update test'
+      question:
+        create: 'Create question'
+        update: 'Update question'
+      answer:
+        create: 'Create answer'
+        update: 'Update answer'
+
+  shared:
+    errors:
+      detected: "%{error_count} detected"
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    nav:
+      all_tests: 'All tests'
+      welcome: "Welcome, %{full_name} Guru"
+      logout: 'Logout'
+      sign_up: 'Sign up'
+      log_in: 'Log in'
+    footer:
+      description: "%{url} - A website for creating and taking tests"
+      thinknetica: 'An educational project for the online school Thinknetica.'
+
+  tests:
+    index:
+      header: 'Available tests'
+      title: 'Title'
+      level: 'Level'
+      category: 'Category'
+      category_id: 'Category'
+      questions: 'Questions'
+      actions: 'Actions'
+    test:
+      start: 'Start'
+
+  tests_users:
+    show:
+      start_test: "Start %{test_title} Test"
+      next: 'Next'
+    result:
+      test_completed: "The %{test_title} test completed!"
+      your_result: 'Your result:'
+      success: "%{result}% SUCCESS!"
+      failure: "%{result}% FAILURE!"
+
+  admin:
+    nav:
+      admin_panel: 'TestGuru Admin Panel'
+      welcome: 'Welcome'
+      guru: 'Guru'
+      logout: 'Logout'
+    tests:
+      index:
+        header: 'Tests'
+        new: 'New test'
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+        category_id: 'Category'
+        questions: 'Questions'
+        actions: 'Actions'
+      edit:
+        header: "Edit %{title} test"
+      new:
+        header: "New test"
+      show:
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+        category_id: 'Category'
+        questions: 'Questions:'
+        no_questions: 'There is no questions'
+        new_question: 'New question'
+        question_body: 'Body'
+        question_actions: 'Actions'
+    questions:
+      show:
+        body: 'Body'
+        answers: 'Answers:'
+        no_answers: 'There is no answers'
+        new_answer: 'New answer'
+        answer_body: 'Body'
+        answer_correct: 'Correct'
+        answer_actions: 'Actions'
+    answers:
+      edit:
+        header: 'Edit Answer'
+      new:
+        header: 'Create New Answer'
+      show:
+        body: 'Body'
+        correct: 'Correct'
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed TestGuru test!'

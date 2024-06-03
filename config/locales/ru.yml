@@ -1,2 +1,158 @@
 ru:
-  hello: "Привет мир"
+  testguru: 'TestGuru'
+
+  navigation:
+    edit: 'Изменить'
+    back: 'Назад'
+    all_tests: 'Все тесты'
+
+  actions:
+    show: "Просмотр"
+    edit: "Изменить"
+    delete: "Удалить"
+    confirmation: "Вы уверены?"
+
+  controllers:
+    sessions:
+      hello: "Привет, %{full_name}!"
+
+  helpers:
+    select:
+      prompt: 'Пожалуйста выберите'
+    questions:
+      new: 'Создать'
+      edit: 'Изменить'
+      question: 'Вопрос'
+
+    label:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+        author: 'Автор'
+        author_id: 'Автор'
+      category:
+        title: 'Название'
+      question:
+        body: 'Тело'
+        test: 'Тест'
+        test_id: 'Тест'
+      answer:
+        body: 'Тело'
+        correct: 'Правильно'
+      tests_user:
+        test: 'Тест'
+        test_id: 'Тест'
+        user: 'Пользователь'
+        user_id: 'Пользователь'
+        completed: 'Завершен'
+        correct_questions: 'Верные вопросы'
+        current_question: 'Текущий вопрос'
+        current_question_id: 'Текущий вопрос'
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+
+    submit:
+      test:
+        create: 'Создать тест'
+        update: 'Изменить тест'
+      question:
+        create: 'Создать вопрос'
+        update: 'Изменить вопрос'
+      answer:
+        create: 'Создать ответ'
+        update: 'Изменить ответ'
+
+  shared:
+    errors:
+      detected: "%{error_count} обнаружено"
+      header:
+        one: "%{count} ошибка обнаружена"
+        few: "%{count} ошибок обнаружено"
+        many: "%{count} ошибок обнаружено"
+        other: "%{count} ошибки обнаружено"
+    nav:
+      all_tests: 'Все тесты'
+      welcome: "Добро пожаловать, %{full_name} Гуру"
+      logout: 'Выйти'
+      sign_up: 'Регистрация'
+      log_in: 'Войти'
+    footer:
+      description: "%{url} - Сайт для создания и прохождения тестов"
+      thinknetica: 'Учебный проект в онлайн-школе Thinknetica.'
+
+  tests:
+    index:
+      header: 'Доступные тесты'
+      title: 'Название'
+      level: 'Уровень'
+      category: 'Категория'
+      category_id: 'Категория'
+      questions: 'Вопросы'
+      actions: 'Действия'
+    test:
+      start: 'Начать'
+
+  tests_users:
+    show:
+      start_test: "%{test_title} Тест"
+      next: 'Следующий'
+    result:
+      test_completed: "%{test_title} тест завершен!"
+      your_result: 'Ваш результат:'
+      success: "%{result}% УСПЕХ!"
+      failure: "%{result}% ПРОВАЛ!"
+
+  admin:
+    nav:
+      admin_panel: 'TestGuru Панель Администратора'
+      welcome: 'Добро пожаловать'
+      guru: 'Гуру'
+      logout: 'Выйти'
+    tests:
+      index:
+        header: 'Тесты'
+        new: 'Новый тест'
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+        questions: 'Вопросы'
+        actions: 'Действия'
+      edit:
+        header: "Изменить %{title} тест"
+      new:
+        header: "Новый тест"
+      show:
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+        questions: 'Вопросы:'
+        no_questions: 'Нет вопросов'
+        new_question: 'Новый вопрос'
+        question_body: 'Тело'
+        question_actions: 'Действия'
+    questions:
+      show:
+        body: 'Тело'
+        answers: 'Ответы:'
+        no_answers: 'Нет ответов'
+        new_answer: 'Новый ответ'
+        answer_body: 'Тело'
+        answer_correct: 'Правильный'
+        answer_actions: 'Действия'
+    answers:
+      edit:
+        header: 'Изменить ответ'
+      new:
+        header: 'Создать новый ответ'
+      show:
+        body: 'Тело'
+        correct: 'Правильный'
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы завершили TestGuru тест!'

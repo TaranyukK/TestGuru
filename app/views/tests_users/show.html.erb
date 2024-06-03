@@ -1,4 +1,4 @@
-<h1>Start <%= @tests_user.test.title%> Test</h1>
+<h1><%= t('.start_test', test_title: @tests_user.test.title)%></h1>
 
 <p><%= @tests_user.test.questions.index(@tests_user.current_question) + 1 %>/<%= @tests_user.test.questions.count %></p>
 
@@ -14,5 +14,5 @@
     </p>
   <% end %>
 
-  <%= f.submit 'Next' %>
+  <%= f.submit t('.next') %>
 <% end %>

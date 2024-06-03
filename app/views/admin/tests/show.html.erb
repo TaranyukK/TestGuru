@@ -1,36 +1,36 @@
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('.title') %>:</strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('.level') %>:</strong>
   <%= @test.level %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong><%= t('.category_id') %>:</strong>
   <%= @test.category.title %>
 </p>
 
 <p>
-  <strong><%= @test.questions.present? ? 'Questions:' : 'There is no questions' %></strong>
+  <strong><%= @test.questions.present? ? t('.questions') : t('.no_questions') %></strong>
 </p>
 
 <p>
-  <%= link_to 'New question', new_admin_test_question_path(@test) %>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 </p>
 
 <% if @test.questions.present? %>
   <table>
     <tr>
-      <th>Body</th>
-      <th colspan="3">Actions</th>
+      <th><%= t('.question_body') %></th>
+      <th colspan="3"><%= t('.question_actions') %></th>
     </tr>
 
     <%= render @test.questions %>
   </table>
 <% end %>
 
-<%= link_to 'Edit', edit_admin_test_path(@test) %> |
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('navigation.edit'), edit_admin_test_path(@test) %> |
+<%= link_to t('navigation.back'), admin_tests_path %>
