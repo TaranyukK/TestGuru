@@ -1,5 +1,5 @@
 class TestsUsersController < ApplicationController
-  before_action :set_tests_user, only: [:show, :result, :update]
+  before_action :set_tests_user, only: %i[show result update gist]
 
   def show; end
 
@@ -17,6 +17,18 @@ class TestsUsersController < ApplicationController
     else
       render :show
     end
+  end
+
+  def gist
+    result = GistQuestionService.new(@tests_user.current_question).call
+
+    flash_options = if result
+                     { notice: t('.success', url: helpers.gist_url(result[:html_url])) }
+                   else
+                     { alert: t('.failure') }
+                   end
+
+    redirect_to @tests_user, flash_options
   end
 
   private
