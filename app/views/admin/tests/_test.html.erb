@@ -3,11 +3,13 @@
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to t('actions.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('actions.edit'), edit_admin_test_path(test) %></td>
-  <td><%= link_to t('actions.delete'),
-                  admin_test_path(test),
-                    method: :delete,
-                    data: { confirm: t('actions.confirmation') } %>
+  <td><%= link_to t('actions.show'), admin_test_path(test), class: 'btn btn-info btn-sm' %></td>
+  <td><%= link_to t('actions.edit'), edit_admin_test_path(test), class: 'btn btn-warning btn-sm' %></td>
+  <td>
+    <%= link_to t('actions.delete'), admin_test_path(test),
+                method: :delete,
+                data: { confirm: t('actions.confirmation') },
+                class: 'btn btn-danger btn-sm'
+    %>
   </td>
 </tr>
