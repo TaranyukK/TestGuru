@@ -109,9 +109,10 @@ en:
       your_result: 'Your result:'
       success: "%{result}% SUCCESS!"
       failure: "%{result}% FAILURE!"
-    gist:
-      success: 'Gist question created successfully! You can go to it by %{url}'
-      failure: 'Something went wrong, please try again later!'
+
+  gist:
+    success: 'Gist question created successfully! You can go to it by %{url}'
+    failure: 'Something went wrong, please try again later!'
 
   admin:
     nav:

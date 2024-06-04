@@ -16,12 +16,11 @@ gem 'devise', "~> 4.9"
 gem 'rails-i18n', '~> 6.0'
 gem 'jquery-rails', '~> 4.3'
 gem 'bootstrap', '~> 5.3'
-gem 'faraday', '~> 2.9'
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'octokit'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 end
 
 group :development do

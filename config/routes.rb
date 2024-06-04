@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   resources :tests_users, only: %i[show update] do
     member do
       get :result
-      post :gist
     end
   end
+
+  resources :gists, only: :create
 
   namespace :admin do
     resources :tests do

@@ -19,19 +19,6 @@ class TestsUsersController < ApplicationController
     end
   end
 
-  def gist
-    result = GistQuestionService.new(@tests_user.current_question).call
-
-    flash_options = if result
-                      current_user.gists.create(question: @tests_user.current_question, gist_url: result[:html_url])
-                     { notice: t('.success', url: helpers.gist_url(result[:html_url])) }
-                   else
-                     { alert: t('.failure') }
-                   end
-
-    redirect_to @tests_user, flash_options
-  end
-
   private
 
   def set_tests_user
