@@ -301,7 +301,6 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise (~> 4.9)
   dotenv-rails (~> 2.1, >= 2.1.1)
-  faraday (~> 2.9)
   foreman
   jbuilder (~> 2.7)
   jquery-rails (~> 4.3)
