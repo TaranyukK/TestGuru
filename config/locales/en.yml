@@ -23,7 +23,8 @@ en:
       new: 'Create New'
       edit: 'Edit'
       question: 'Question'
-
+    tests_users:
+      link: 'link'
     label:
       test:
         title: 'Title'
@@ -65,6 +66,10 @@ en:
         create: 'Create answer'
         update: 'Update answer'
 
+  services:
+    gist_question:
+      description: "A question about %{title} from TestGuru"
+
   shared:
     errors:
       detected: "%{error_count} detected"
@@ -98,11 +103,16 @@ en:
     show:
       start_test: "Start %{test_title} Test"
       next: 'Next'
+      gist_question: 'Gist Question'
     result:
       test_completed: "The %{test_title} test completed!"
       your_result: 'Your result:'
       success: "%{result}% SUCCESS!"
       failure: "%{result}% FAILURE!"
+
+  gist:
+    success: 'Gist question created successfully! You can go to it by %{url}'
+    failure: 'Something went wrong, please try again later!'
 
   admin:
     nav:
@@ -110,6 +120,8 @@ en:
       welcome: 'Welcome'
       guru: 'Guru'
       logout: 'Logout'
+      tests: 'Tests'
+      gists: 'Gists'
     tests:
       index:
         header: 'Tests'
@@ -151,6 +163,14 @@ en:
       show:
         body: 'Body'
         correct: 'Correct'
+    gists:
+      index:
+        header: 'Gists'
+        question_body: 'Question'
+        gist: 'Gist'
+        user_email: 'User`s email'
+      gist:
+        link: 'Link'
 
   tests_mailer:
     completed_test:

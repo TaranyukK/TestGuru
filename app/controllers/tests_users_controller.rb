@@ -1,5 +1,5 @@
 class TestsUsersController < ApplicationController
-  before_action :set_tests_user, only: [:show, :result, :update]
+  before_action :set_tests_user, only: %i[show result update gist]
 
   def show; end
 

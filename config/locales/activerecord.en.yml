@@ -7,6 +7,7 @@ en:
       question: 'Question'
       answer: 'Answer'
       tests_user: 'TestsUser'
+      gist: 'Gist'
     attributes:
       test:
         title: 'Title'
@@ -20,6 +21,7 @@ en:
       question:
       answer:
       test_user:
+      gist:
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
