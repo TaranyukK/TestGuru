@@ -17,6 +17,7 @@ gem 'rails-i18n', '~> 6.0'
 gem 'jquery-rails', '~> 4.3'
 gem 'bootstrap', '~> 5.3'
 gem 'octokit'
+gem 'octicons_helper'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
