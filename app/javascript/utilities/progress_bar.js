@@ -10,4 +10,3 @@ document.addEventListener('turbolinks:load', function() {
     progressBar.querySelector('.progress-bar').setAttribute('aria-valuenow', progressPercent)
   }
 })
-
