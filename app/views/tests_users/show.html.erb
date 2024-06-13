@@ -1,5 +1,13 @@
 <h1><%= t('.start_test', test_title: @tests_user.test.title)%></h1>
 <p><%= @tests_user.test.questions.index(@tests_user.current_question) + 1 %>/<%= @tests_user.test.questions.count %></p>
+<%= content_tag :div,
+                class: 'progress',
+                data: { questions_done: @tests_user.test.questions.index(@tests_user.current_question) + 1,
+                        questions_count: @tests_user.test.questions.count
+                } do %>
+  <div class="progress-bar" role="progressbar"></div>
+<% end %>
+
 <b><%= @tests_user.current_question.body %></b>
 
 <%= form_with url: tests_user_path(@tests_user), local: true, method: :put do |f| %>
