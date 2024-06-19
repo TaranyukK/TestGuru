@@ -146,6 +146,8 @@ en:
         new_question: 'New question'
         question_body: 'Body'
         question_actions: 'Actions'
+      form_inline:
+        submit: 'OK'
     questions:
       show:
         body: 'Body'

@@ -148,6 +148,8 @@ ru:
         new_question: 'Новый вопрос'
         question_body: 'Тело'
         question_actions: 'Действия'
+      form_inline:
+        submit: 'OK'
     questions:
       show:
         body: 'Тело'
