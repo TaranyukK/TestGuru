@@ -1,0 +1,14 @@
+<tr>
+  <td class="align-middle"><%= feedback.name %></td>
+  <td class="align-middle"><%= feedback.email %></td>
+  <td class="align-middle"><%= feedback.body.truncate(25) %></td>
+  <td class="align-middle"><%= feedback.created_at.strftime("%d.%m.%Y %H:%M") %></td>
+  <td class="align-middle"><%= link_to t('actions.show'), admin_feedback_path(feedback), class: 'btn btn-info btn-sm' %></td>
+  <td class="align-middle">
+    <%= link_to t('actions.delete'), admin_feedback_path(feedback),
+                method: :delete,
+                data: { confirm: t('actions.confirmation') },
+                class: 'btn btn-danger btn-sm'
+    %>
+  </td>
+</tr>

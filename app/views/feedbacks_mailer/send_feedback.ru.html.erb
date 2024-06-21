@@ -1,0 +1,26 @@
+<h1>Новый запрос обратной связи!</h1>
+
+<p>От:</p>
+<p>
+  <%= @feedback.email %>
+</p>
+
+<p>Имя:</p>
+<p>
+  <%= @feedback.name %>
+</p>
+
+<p>Текст:</p>
+<p>
+  <%= @feedback.body %>
+</p>
+
+<p>Дата:</p>
+<p>
+  <%= @feedback.created_at.strftime('%d.%m.%Y %H:%M') %>
+</p>
+
+<p>
+  <%= link_to 'Ссылка', admin_feedback_url(@feedback) %>
+</p>
+

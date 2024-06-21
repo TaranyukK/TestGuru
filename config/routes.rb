@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   resources :gists, only: :create
+  resources :feedbacks, only: %i[new create]
 
   namespace :admin do
     resources :tests do
@@ -27,5 +28,6 @@ Rails.application.routes.draw do
     end
 
     resources :gists, only: :index
+    resources :feedbacks, only: %i[index show destroy]
   end
 end

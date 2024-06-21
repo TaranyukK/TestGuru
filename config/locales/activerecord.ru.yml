@@ -8,6 +8,7 @@ ru:
       answer: 'Ответ'
       tests_user: 'Пользователь Тест'
       gist: 'Gist`ы'
+      feedback: 'Обратная связь'
     attributes:
       test:
         title: 'Название'
@@ -22,6 +23,7 @@ ru:
       answer:
       test_user:
       gist:
+      feedback:
     errors:
       messages:
         record_invalid: 'Ошибка валидации: %{errors}'

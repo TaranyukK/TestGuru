@@ -1,0 +1,23 @@
+<div class="mb-3">
+  <strong><%= t('.name') %>:</strong>
+  <%= @feedback.name %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.email') %>:</strong>
+  <%= @feedback.email %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.body') %>:</strong>
+  <%= @feedback.body %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.datetime') %>:</strong>
+  <%= @feedback.created_at.strftime('%d.%m.%Y %H:%M') %>
+</div>
+
+<div>
+  <%= link_to t('navigation.back'), admin_feedbacks_path, class: 'btn btn-secondary' %>
+</div>

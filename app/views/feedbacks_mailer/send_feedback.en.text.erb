@@ -1,0 +1,17 @@
+New feedback request!
+=======
+
+From:
+<%= @feedback.email %>
+
+Name:
+<%= @feedback.name %>
+
+Body:
+<%= @feedback.body %>
+
+Datetime:
+<%= @feedback.created_at.strftime('%d.%m.%Y %H:%M') %>
+
+Link:
+<%= admin_feedback_url(@feedback) %>

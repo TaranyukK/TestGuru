@@ -7,6 +7,9 @@
     <div>
       <%= link_to t('.gists'), admin_gists_path, class: 'nav-link d-inline' %>
     </div>
+    <div>
+      <%= link_to t('.feedbacks'), admin_feedbacks_path, class: 'nav-link d-inline' %>
+    </div>
     <div class="d-flex">
       <span class="navbar-text me-3">
         <%= t('.welcome') %>, <b class="user-email"><%= current_user.email %></b> <%= t('.guru') %>
