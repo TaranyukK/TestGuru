@@ -1,6 +1,8 @@
 users = []
 tests = []
 
+User.create(first_name: "Admin", last_name: "Adminovich", type: 'Admin', email: "test@test.com", password: "123456", password_confirmation: "123456")
+
 { Alice: 'Cooper', Bob: 'Dylan', Charlie: 'Starr' }.each do |first_name, last_name|
   users << User.create!(first_name: first_name.to_s,
                         last_name: last_name,
