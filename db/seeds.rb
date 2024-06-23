@@ -1,7 +1,8 @@
 users = []
 tests = []
 
-User.create(first_name: "Admin", last_name: "Adminovich", type: 'Admin', email: "test@test.com", password: "123456", password_confirmation: "123456")
+admin = User.create(first_name: "Admin", last_name: "Adminovich", type: 'Admin', email: "test@test.com", password: "123456", password_confirmation: "123456")
+admin.confirm
 
 { Alice: 'Cooper', Bob: 'Dylan', Charlie: 'Starr' }.each do |first_name, last_name|
   users << User.create!(first_name: first_name.to_s,
@@ -12,6 +13,7 @@ User.create(first_name: "Admin", last_name: "Adminovich", type: 'Admin', email: 
                         password_confirmation: '123456'
   )
 end
+users.map(&:confirm)
 
 %w[Programming Math].each do |title|
   category = Category.create!(title: title)
