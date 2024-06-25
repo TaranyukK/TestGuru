@@ -30,7 +30,7 @@ end
     tests << test = Test.find_or_create_by!(
       title: "#{title} Test Level #{i + 1}",
       level: i + 1,
-      author_id: users.sample.id,
+      author_id: admin.id,
       category_id: category.id
     )
 
