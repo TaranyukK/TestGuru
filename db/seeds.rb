@@ -8,7 +8,7 @@ admin = Admin.find_or_initialize_by(email: "test@test.com") do |adm|
   adm.password_confirmation = '123456'
 end
 admin.skip_confirmation!
-admin.save
+admin.save!
 
 { Alice: 'Cooper', Bob: 'Dylan', Charlie: 'Starr' }.each do |first_name, last_name|
   user = User.find_or_initialize_by(email: "#{first_name.downcase}@example.com") do |usr|
@@ -19,36 +19,44 @@ admin.save
     usr.password_confirmation = '123456'
   end
   user.skip_confirmation!
-  user.save
+  user.save!
   users << user
 end
 
 %w[Programming Math].each do |title|
-  category = Category.find_or_initialize_by(title: title)
-  category.save!
+  category = Category.find_or_create_by!(title: title)
 
   2.times do |i|
-    tests << test = Test.find_or_initialize_by(
+    test = Test.find_or_initialize_by(
       title: "#{title} Test Level #{i + 1}",
       level: i + 1,
       author_id: admin.id,
       category_id: category.id
     )
-    test.save!
+    if test.new_record?
+      test.save!
+    end
+    tests << test
 
     5.times do |j|
       question = Question.find_or_initialize_by(
         body: "Question #{j + 1} for #{test.title}",
         test_id: test.id
       )
-      question.save!
+      if question.new_record?
+        question.save!
+      end
 
       4.times do |k|
-        Answer.find_or_initialize_by(
+        answer = Answer.find_or_initialize_by(
           body: "Answer #{k + 1} for Question #{j + 1}",
-          correct: k == 0,
           question_id: question.id
-        ).save!
+        ) do |ans|
+          ans.correct = k == 0
+        end
+        if answer.new_record?
+          answer.save!
+        end
       end
     end
   end
