@@ -24,21 +24,31 @@ admin.save
 end
 
 %w[Programming Math].each do |title|
-  category = Category.find_or_create_by!(title: title)
+  category = Category.find_or_initialize_by(title: title)
+  category.save!
 
   2.times do |i|
-    tests << test = Test.find_or_create_by!(
+    tests << test = Test.find_or_initialize_by(
       title: "#{title} Test Level #{i + 1}",
       level: i + 1,
       author_id: admin.id,
       category_id: category.id
     )
+    test.save!
 
     5.times do |j|
-      question = Question.find_or_create_by!(body: "Question #{j + 1} for #{test.title}", test_id: test.id)
+      question = Question.find_or_initialize_by(
+        body: "Question #{j + 1} for #{test.title}",
+        test_id: test.id
+      )
+      question.save!
 
       4.times do |k|
-        Answer.find_or_create_by!(body: "Answer #{k + 1} for Question #{j + 1}", correct: k == 0, question_id: question.id)
+        Answer.find_or_initialize_by(
+          body: "Answer #{k + 1} for Question #{j + 1}",
+          correct: k == 0,
+          question_id: question.id
+        ).save!
       end
     end
   end
