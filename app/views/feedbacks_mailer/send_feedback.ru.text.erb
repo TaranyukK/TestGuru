@@ -1,0 +1,17 @@
+Новый запрос обратной связи!
+=======
+
+От:
+<%= @feedback.email %>
+
+Имя:
+<%= @feedback.name %>
+
+Текст:
+<%= @feedback.body %>
+
+Дата:
+<%= @feedback.created_at.strftime('%d.%m.%Y %H:%M') %>
+
+Ссылка:
+<%= admin_feedback_url(@feedback) %>

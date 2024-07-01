@@ -75,7 +75,7 @@ ru:
       detected: "%{error_count} обнаружено"
       header:
         one: "%{count} ошибка обнаружена"
-        few: "%{count} ошибок обнаружено"
+        few: "%{count} ошибки обнаружено"
         many: "%{count} ошибок обнаружено"
         other: "%{count} ошибки обнаружено"
     nav:
@@ -88,6 +88,9 @@ ru:
     footer:
       description: "%{url} - Сайт для создания и прохождения тестов"
       thinknetica: 'Учебный проект в онлайн-школе Thinknetica.'
+      have_question: 'Есть вопрос'
+      send: 'Отправь запрос на'
+      feedback: 'обратную связь'
 
   tests:
     index:
@@ -116,6 +119,12 @@ ru:
     success: 'Gist вопроса успешно создан! Вы можете перейти на нее по %{url}'
     failure: 'Что-то пошло не так, повторите попытку позже!'
 
+  feedbacks:
+    new:
+      header: 'Запрос обратной связи'
+    success: 'Запрос обратной связи успешно создан!'
+    failure: 'Что-то пошло не так, повторите попытку позже!'
+
   admin:
     nav:
       admin_panel: 'TestGuru Панель Администратора'
@@ -124,6 +133,7 @@ ru:
       logout: 'Выйти'
       tests: 'Тесты'
       gists: 'Gist`ы'
+      feedbacks: 'Обратная связь'
     tests:
       index:
         header: 'Тесты'
@@ -176,7 +186,24 @@ ru:
         user_email: 'Email пользователя'
       gist:
         link: 'Ссылка'
+    feedbacks:
+      index:
+        header: 'Обратные связи'
+        feedback: 'Обратная связь'
+        name: 'Имя'
+        email: 'Email'
+        body: 'Текст'
+        datetime: 'Дата'
+        actions: 'Действия'
+      show:
+        name: 'Имя'
+        email: 'Email'
+        body: 'Текст'
+        datetime: 'Дата'
 
   tests_mailer:
     completed_test:
       subject: 'Вы завершили TestGuru тест!'
+  feedbacks_mailer:
+    send_feedback:
+      subject: 'Пришел запрос обратной связи!'

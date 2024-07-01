@@ -4,4 +4,9 @@
     <%= t('.description', url: github_url('TaranyukK', 'TestGuru')).html_safe %>.
     <%= link_to t('.thinknetica'), 'https://thinknetica.com', target: '_blank' %>
   </p>
+  <p>
+    <%= t('.have_question') %>?
+    <%= t('.send') %>
+    <%= link_to t('.feedback'), new_feedback_path %>
+  </p>
 </footer>

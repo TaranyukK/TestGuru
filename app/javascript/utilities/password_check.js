@@ -3,9 +3,17 @@ document.addEventListener("turbolinks:load", function() {
   const passwordConfirmationField = document.querySelector('#user_password_confirmation')
 
   function checkPasswordsMatch() {
-    if (passwordConfirmationField && passwordConfirmationField.value > 0) {
-      let match = passwordField.value === passwordConfirmationField.value
-      passwordConfirmationField.style.backgroundColor = match ? 'lightgreen' : 'lightcoral'
+    if (!passwordField || !passwordConfirmationField) return
+
+    const password = passwordField.value.trim()
+    const passwordConfirmation = passwordConfirmationField.value.trim()
+
+    if (passwordConfirmation.length > 0) {
+      passwordConfirmationField.style.backgroundColor = (password === passwordConfirmation) ? 'lightgreen' : 'lightcoral'
+    } else if (password.length > 0) {
+      passwordConfirmationField.style.backgroundColor = 'lightcoral'
+    } else {
+      passwordConfirmationField.style.backgroundColor = ''
     }
   }
 
