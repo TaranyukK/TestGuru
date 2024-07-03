@@ -33,6 +33,7 @@ ru:
         category_id: 'Категория'
         author: 'Автор'
         author_id: 'Автор'
+        timer: 'Время'
       category:
         title: 'Название'
       question:
@@ -101,8 +102,10 @@ ru:
       category_id: 'Категория'
       questions: 'Вопросы'
       actions: 'Действия'
+      timer: 'Время'
     test:
       start: 'Начать'
+      none: 'Нет'
 
   tests_users:
     show:
@@ -144,6 +147,8 @@ ru:
         category_id: 'Категория'
         questions: 'Вопросы'
         actions: 'Действия'
+        timer: 'Время'
+        none: 'Нет'
       edit:
         header: "Изменить %{title} тест"
       new:
@@ -158,6 +163,8 @@ ru:
         new_question: 'Новый вопрос'
         question_body: 'Тело'
         question_actions: 'Действия'
+        timer: 'Время'
+        none: 'Нет'
       form_inline:
         submit: 'OK'
     questions:
