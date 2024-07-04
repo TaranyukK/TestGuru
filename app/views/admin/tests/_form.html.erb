@@ -17,6 +17,11 @@
   </div>
 
   <div class="mb-3">
+    <%= f.label :timer, class: 'form-label' %>
+    <%= f.number_field :timer, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
     <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

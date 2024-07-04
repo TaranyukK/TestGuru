@@ -1,5 +1,8 @@
 <h1><%= t('.start_test', test_title: @tests_user.test.title)%></h1>
 <p><%= @tests_user.test.questions.index(@tests_user.current_question) + 1 %>/<%= @tests_user.test.questions.count %></p>
+
+<div id="timer" data-duration="<%= @tests_user.time_left %>"></div>
+
 <%= content_tag :div,
                 class: 'progress',
                 data: { questions_done: @tests_user.test.questions.index(@tests_user.current_question) + 1,

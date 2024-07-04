@@ -11,6 +11,7 @@ require('../utilities/sorting')
 require('../utilities/password_check')
 require('../utilities/form_inline')
 require('../utilities/progress_bar')
+require('../utilities/timer')
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"

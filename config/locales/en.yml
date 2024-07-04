@@ -33,6 +33,7 @@ en:
         category_id: 'Category'
         author: 'Author'
         author_id: 'Author'
+        timer: 'Time'
       category:
         title: 'Title'
       question:
@@ -99,8 +100,10 @@ en:
       category_id: 'Category'
       questions: 'Questions'
       actions: 'Actions'
+      timer: 'Time'
     test:
       start: 'Start'
+      none: 'No'
 
   tests_users:
     show:
@@ -142,6 +145,8 @@ en:
         category_id: 'Category'
         questions: 'Questions'
         actions: 'Actions'
+        timer: 'Time'
+        none: 'No'
       edit:
         header: "Edit %{title} test"
       new:
@@ -156,6 +161,8 @@ en:
         new_question: 'New question'
         question_body: 'Body'
         question_actions: 'Actions'
+        timer: 'Time'
+        none: 'No'
       form_inline:
         submit: 'OK'
     questions:

@@ -21,6 +21,14 @@ class TestsUser < ApplicationRecord
     (correct_questions.to_f / test.questions.count * 100).round
   end
 
+  def tests_user_timer
+    (Time.current - created_at).to_i
+  end
+
+  def time_left
+    (test.timer * 60) - tests_user_timer
+  end
+
   private
 
   def correct_answer?(answer_ids)
@@ -37,5 +45,9 @@ class TestsUser < ApplicationRecord
 
   def set_current_question
     self.current_question = self.current_question.nil? ? test.questions.first : next_question
+  end
+
+  def on_time?
+    test.timer.zero? || tests_user_timer <= test.timer
   end
 end
