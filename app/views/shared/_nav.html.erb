@@ -4,6 +4,9 @@
     <div>
       <%= link_to t('.all_tests'), tests_path, class: 'nav-link d-inline' %>
     </div>
+    <div>
+      <%= link_to t('.all_badges'), badges_path, class: 'nav-link d-inline' %>
+    </div>
     <% if current_user.is_a?(Admin) %>
       <div>
         <%= link_to t('.admin_panel'), admin_tests_path, class: 'nav-link d-inline' %>

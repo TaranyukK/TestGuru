@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :gists, only: :create
   resources :feedbacks, only: %i[new create]
+  resources :badges, only: :index
 
   namespace :admin do
     resources :tests do
@@ -29,5 +30,6 @@ Rails.application.routes.draw do
 
     resources :gists, only: :index
     resources :feedbacks, only: %i[index show destroy]
+    resources :badges
   end
 end

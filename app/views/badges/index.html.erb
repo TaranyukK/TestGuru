@@ -1,0 +1,18 @@
+<h2><%= t('.header') %></h2>
+
+<% if @badges.present? %>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t('.image') %></th>
+          <th><%= t('.title') %></th>
+          <th><%= t('.option') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @badges %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

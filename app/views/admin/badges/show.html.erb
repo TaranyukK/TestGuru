@@ -1,0 +1,24 @@
+<div class="mb-3">
+  <strong><%= t('.image') %>:</strong>
+  <%= image_tag(@badge.image_url, width: "20%") %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.title') %>:</strong>
+  <%= @badge.name %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.rule') %>:</strong>
+  <%= @badge.rule %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.option') %>:</strong>
+  <%= @badge.option %>
+</div>
+
+<div>
+  <%= link_to t('navigation.edit'), edit_admin_badge_path(@badge), class: 'btn btn-warning' %>
+  <%= link_to t('navigation.back'), admin_badges_path, class: 'btn btn-secondary' %>
+</div>

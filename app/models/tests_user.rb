@@ -15,6 +15,10 @@ class TestsUser < ApplicationRecord
     end
 
     save!
+
+    if completed?
+      BadgeService.new(self).call
+    end
   end
 
   def correct_answers_percent
