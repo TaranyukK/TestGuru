@@ -13,7 +13,7 @@ class BadgeService
 
   private
 
-  def first_try?
+  def first_try?(option)
     @user.tests_users.where(test: @test).count == 1 && @tests_user.completed?
   end
 
@@ -39,6 +39,6 @@ class BadgeService
   end
 
   def self.badge_rules
-    [ :first_attempt, :tests_by_category_finished, :tests_by_level_finished ]
+    [ :first_try, :all_category, :all_level ]
   end
 end
