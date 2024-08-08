@@ -1,21 +1,26 @@
 <div class="mb-3">
-  <strong><%= t('.image') %>:</strong>
+  <strong><%= t('.image_url') %>:</strong>
   <%= image_tag(@badge.image_url, width: "20%") %>
 </div>
 
 <div class="mb-3">
-  <strong><%= t('.title') %>:</strong>
+  <strong><%= t('.name') %>:</strong>
   <%= @badge.name %>
 </div>
 
 <div class="mb-3">
-  <strong><%= t('.rule') %>:</strong>
-  <%= @badge.rule %>
+  <strong><%= t('.description') %>:</strong>
+  <%= @badge.description %>
 </div>
 
 <div class="mb-3">
-  <strong><%= t('.option') %>:</strong>
-  <%= @badge.option %>
+  <strong><%= t('.rule_type') %>:</strong>
+  <%= (t"#{@badge.rule_type}") %>
+</div>
+
+<div class="mb-3">
+  <strong><%= t('.rule_value') %>:</strong>
+  <%= @badge.rule_value %>
 </div>
 
 <div>

@@ -1,9 +1,12 @@
 class TestsUser < ApplicationRecord
+  SUCCESS_RESULT = 85
+
   belongs_to :test
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :set_current_question
+  before_save :count_score, if: :completed?
 
   def completed?
     current_question.nil?
@@ -15,10 +18,6 @@ class TestsUser < ApplicationRecord
     end
 
     save!
-
-    if completed?
-      BadgeService.new(self).call
-    end
   end
 
   def correct_answers_percent
@@ -31,6 +30,14 @@ class TestsUser < ApplicationRecord
 
   def time_left
     (test.timer * 60) - tests_user_timer
+  end
+
+  def on_time?
+    test.timer.zero? || tests_user_timer <= test.timer
+  end
+
+  def successful?
+    on_time? && score >= SUCCESS_RESULT if completed?
   end
 
   private
@@ -51,7 +58,7 @@ class TestsUser < ApplicationRecord
     self.current_question = self.current_question.nil? ? test.questions.first : next_question
   end
 
-  def on_time?
-    test.timer.zero? || tests_user_timer <= test.timer
+  def count_score
+    self.score = correct_answers_percent
   end
 end

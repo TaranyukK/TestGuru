@@ -1,4 +1,4 @@
-<h1><%= t('.header', title: @badge.name) %></h1>
+<h1><%= t('.header', name: @badge.name) %></h1>
 
 <%= render 'form' %>
 <%= link_to t('navigation.back'), admin_badge_path(@badge), class: 'btn btn-secondary mt-3' %>
