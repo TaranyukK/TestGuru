@@ -3,14 +3,13 @@ class TestsUsersController < ApplicationController
 
   def show; end
 
-  def result
-    @result = @tests_user.correct_answers_percent
-  end
+  def result; end
 
   def update
     @tests_user.accept!(params[:answer_ids])
 
     if @tests_user.completed?
+      BadgeService.new(@tests_user).call
       TestsMailer.completed_test(@tests_user).deliver_now
 
       redirect_to result_tests_user_path(@tests_user)

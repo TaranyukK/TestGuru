@@ -55,6 +55,12 @@ ru:
       user:
         first_name: 'Имя'
         last_name: 'Фамилия'
+      badge:
+        name: 'Имя'
+        description: 'Описание'
+        image_url: 'Изображение'
+        rule_type: 'Тип правила'
+        rule_value: 'Значение правила'
 
     submit:
       test:
@@ -66,6 +72,9 @@ ru:
       answer:
         create: 'Создать ответ'
         update: 'Изменить ответ'
+      badge:
+        create: 'Создать бейдж'
+        update: 'Изменить бейдж'
 
   services:
     gist_question:
@@ -81,6 +90,7 @@ ru:
         other: "%{count} ошибки обнаружено"
     nav:
       all_tests: 'Все тесты'
+      all_badges: 'Все бейджы'
       admin_panel: 'Панель администратора'
       welcome: "Добро пожаловать, %{full_name} Гуру"
       logout: 'Выйти'
@@ -128,6 +138,13 @@ ru:
     success: 'Запрос обратной связи успешно создан!'
     failure: 'Что-то пошло не так, повторите попытку позже!'
 
+  badges:
+    index:
+      header: 'Бейджы'
+      name: 'Имя'
+      description: 'Описание'
+      image_url: 'Изображение'
+
   admin:
     nav:
       admin_panel: 'TestGuru Панель Администратора'
@@ -136,6 +153,7 @@ ru:
       logout: 'Выйти'
       tests: 'Тесты'
       gists: 'Gist`ы'
+      badges: 'Бейджы'
       feedbacks: 'Обратная связь'
     tests:
       index:
@@ -207,6 +225,27 @@ ru:
         email: 'Email'
         body: 'Текст'
         datetime: 'Дата'
+    badges:
+      index:
+        header: 'Бейджы'
+        new: 'Новый бейдж'
+        name: 'Имя'
+        description: 'Описание'
+        image_url: 'Изображение'
+        rule_type: 'Тип правила'
+        rule_value: 'Значение правила'
+        actions: 'Действия'
+      show:
+        name: 'Имя'
+        description: 'Описание'
+        image_url: 'Изображение'
+        rule_type: 'Тип правила'
+        rule_value: 'Значение правила'
+        actions: 'Действия'
+      edit:
+        header: "Изменить %{name} бейдж"
+      new:
+        header: "Новый бейдж"
 
   tests_mailer:
     completed_test:
